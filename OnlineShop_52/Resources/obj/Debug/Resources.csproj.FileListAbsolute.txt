@@ -1,0 +1,10 @@
+C:\OnlineShop_52\Resources\bin\Debug\Resources.dll
+C:\OnlineShop_52\Resources\bin\Debug\Resources.pdb
+C:\OnlineShop_52\Resources\bin\Debug\en\Resources.resources.dll
+C:\OnlineShop_52\Resources\obj\Debug\Resources.StaticResource.resources
+C:\OnlineShop_52\Resources\obj\Debug\Resources.StaticResource.en.resources
+C:\OnlineShop_52\Resources\obj\Debug\Resources.csproj.GenerateResource.Cache
+C:\OnlineShop_52\Resources\obj\Debug\Resources.csproj.CoreCompileInputs.cache
+C:\OnlineShop_52\Resources\obj\Debug\en\Resources.resources.dll
+C:\OnlineShop_52\Resources\obj\Debug\Resources.dll
+C:\OnlineShop_52\Resources\obj\Debug\Resources.pdb
