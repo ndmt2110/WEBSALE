@@ -12,7 +12,7 @@ namespace OnlineShop.Controllers
 {
     public class BaseController : Controller
     {
-        
+
         ////initilizing culture on controller initialization
         //protected override void Initialize(System.Web.Routing.RequestContext requestContext)
         //{
