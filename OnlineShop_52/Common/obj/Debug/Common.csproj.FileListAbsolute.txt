@@ -9,9 +9,3 @@ G:\GIT_Work\OnlineShop_52\Common\obj\Debug\Common.csprojResolveAssemblyReference
 G:\GIT_Work\OnlineShop_52\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 G:\GIT_Work\OnlineShop_52\Common\obj\Debug\Common.dll
 G:\GIT_Work\OnlineShop_52\Common\obj\Debug\Common.pdb
-G:\GIT_Work\WEBSALE\OnlineShop_52\Common\bin\Debug\Common.dll
-G:\GIT_Work\WEBSALE\OnlineShop_52\Common\bin\Debug\Common.pdb
-G:\GIT_Work\WEBSALE\OnlineShop_52\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
-G:\GIT_Work\WEBSALE\OnlineShop_52\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
-G:\GIT_Work\WEBSALE\OnlineShop_52\Common\obj\Debug\Common.dll
-G:\GIT_Work\WEBSALE\OnlineShop_52\Common\obj\Debug\Common.pdb
