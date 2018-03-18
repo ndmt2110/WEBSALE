@@ -6,41 +6,166 @@
     var listNewProducts = (List<Model.EF.Product>)ViewBag.NewProducts;
     var listFeatureProducts = (List<Model.EF.Product>)ViewBag.ListFeatureProducts;
 }
-@section slide
-{
-    <div class="header_slide">
-        <div class="header_bottom_left">
-            <div class="categories">
-                @{ Html.RenderAction("ProductCategory", "Product");}
+@*@section slide
+    {
+        <div class="header_slide">
+            <div class="header_bottom_left">
+                <div class="categories">
+                    @{ Html.RenderAction("ProductCategory", "Product");}
+                </div>
             </div>
-        </div>
-        <div class="header_bottom_right">
-            <div class="slider">
-                <div id="slider">
-                    <div id="mover">
-                        @foreach (var item in slides)
-                        {
-                            <div class="slide">
-                                <div class="slider-img">
-                                    <a href="@item.Link"><img src="@item.Image" alt="learn more" /></a>
+            <div class="header_bottom_right">
+                <div class="slider">
+                    <div id="slider">
+                        <div id="mover">
+                            @foreach (var item in slides)
+                            {
+                                <div class="slide">
+                                    <div class="slider-img">
+                                        <a href="@item.Link"><img src="@item.Image" alt="learn more" /></a>
+                                    </div>
+                                    <div class="slider-text">
+                                        <h1>Đại hạ giá<br><span>SALE</span></h1>
+                                        <h2>Giảm đến 20%</h2>
+                                        <a href="preview.html" class="button">Mua ngay</a>
+                                    </div>
+                                    <div class="clear"></div>
                                 </div>
-                                <div class="slider-text">
-                                    <h1>Đại hạ giá<br><span>SALE</span></h1>
-                                    <h2>Giảm đến 20%</h2>
-                                    <a href="preview.html" class="button">Mua ngay</a>
-                                </div>
-                                <div class="clear"></div>
-                            </div>
-                        }
+                            }
 
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    }*@
+
+<div class="new-arrivals-w3agile">
+    <div class="container">
+        <h2 class="tittle">Sản Phẩm Mới</h2>
+        <div class="arrivals-grids">
+            @foreach (var item in listNewProducts)
+            {
+                <div class="col-md-3 arrival-grid simpleCart_shelfItem">
+                    <div class="grid-arr">
+                        <div class="grid-arrival">
+                            <figure>
+                                <a href="#" class="new-gri" data-toggle="modal" data-target="#myModal1">
+                                    <div class="grid-img">
+                                        <img src="images/p6.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="grid-img">
+                                        <img src="images/p5.jpg" class="img-responsive" alt="">
+                                    </div>
+                                </a>
+                            </figure>
+                        </div>
+                        <div class="ribben">
+                            <p>MỚI</p>
+                        </div>
+                        <div class="ribben1">
+                            <p>GIẢM</p>
+                        </div>
+                        <div class="block">
+                            <div class="starbox small ghosting"> </div>
+                        </div>
+                        <div class="women">
+                            <h6><a href="single.html">Sed ut perspiciatis unde</a></h6>
+                            <span class="size">XL / XXL / S </span>
+                            <p><del>$100.00</del><em class="item_price">$70.00</em></p>
+                            <a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+                        </div>
                     </div>
                 </div>
-                <div class="clear"></div>
-            </div>
+            }
+            @*<div class="col-md-3 arrival-grid simpleCart_shelfItem">
+                    <div class="grid-arr">
+                        <div class="grid-arrival">
+                            <figure>
+                                <a href="#" class="new-gri" data-toggle="modal" data-target="#myModal2">
+                                    <div class="grid-img">
+                                        <img src="images/p7.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="grid-img">
+                                        <img src="images/p8.jpg" class="img-responsive" alt="">
+                                    </div>
+                                </a>
+                            </figure>
+                        </div>
+                        <div class="ribben2">
+                            <p>OUT OF STOCK</p>
+                        </div>
+                        <div class="block">
+                            <div class="starbox small ghosting"> </div>
+                        </div>
+                        <div class="women">
+                            <h6><a href="single.html">Sed ut perspiciatis unde</a></h6>
+                            <span class="size">XL / XXL / S </span>
+                            <p><del>$100.00</del><em class="item_price">$70.00</em></p>
+                            <a href="#" data-text="Add To Cart" class=" my-cart-b item_add">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 arrival-grid simpleCart_shelfItem">
+                    <div class="grid-arr">
+                        <div class="grid-arrival">
+                            <figure>
+                                <a href="#" class="new-gri" data-toggle="modal" data-target="#myModal3">
+                                    <div class="grid-img">
+                                        <img src="images/p10.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="grid-img">
+                                        <img src="images/p9.jpg" class="img-responsive" alt="">
+                                    </div>
+                                </a>
+                            </figure>
+                        </div>
+                        <div class="ribben1">
+                            <p>SALE</p>
+                        </div>
+                        <div class="block">
+                            <div class="starbox small ghosting"> </div>
+                        </div>
+                        <div class="women">
+                            <h6><a href="single.html">Sed ut perspiciatis unde</a></h6>
+                            <span class="size">XL / XXL / S </span>
+                            <p><del>$100.00</del><em class="item_price">$70.00</em></p>
+                            <a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 arrival-grid simpleCart_shelfItem">
+                    <div class="grid-arr">
+                        <div class="grid-arrival">
+                            <figure>
+                                <a href="#" class="new-gri" data-toggle="modal" data-target="#myModal4">
+                                    <div class="grid-img">
+                                        <img src="images/p11.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="grid-img">
+                                        <img src="images/p12.jpg" class="img-responsive" alt="">
+                                    </div>
+                                </a>
+                            </figure>
+                        </div>
+                        <div class="block">
+                            <div class="starbox small ghosting"> </div>
+                        </div>
+                        <div class="women">
+                            <h6><a href="single.html">Sed ut perspiciatis unde</a></h6>
+                            <span class="size">XL / XXL / S </span>
+                            <p><del>$100.00</del><em class="item_price">$70.00</em></p>
+                            <a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>*@
+            <div class="clearfix"></div>
         </div>
-        <div class="clear"></div>
     </div>
-}
+</div>
+
 <div class="content">
     <div class="content_top">
         <div class="heading">

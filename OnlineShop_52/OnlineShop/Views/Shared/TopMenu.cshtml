@@ -1,29 +1,46 @@
 ﻿@model List<Model.EF.Menu>
-<div class="call">
-    <p>Chào mừng bạn đến với website!</p>
-    <p><span>Bạn cần giúp đỡ?</span>Gọi ngay cho chúng tôi <span class="number">0988750653</span></p>
-</div>
-<div class="account_desc">
-    @{
-        var session = (UserLogin)Session[OnlineShop.Common.CommonConstants.USER_SESSION];
-    }
-    @if (session == null)
+@{
+    var session = (UserLogin)Session[OnlineShop.Common.CommonConstants.USER_SESSION];
+}
+@if (session == null)
+{
+    foreach (var item in Model)
     {
-        <ul>
-            @foreach (var item in Model)
-            {
-                <li><a href="@item.Link" target="@item.Target">@item.Text</a></li>
-            }
-
-        </ul>
+        <li><a href="@item.Link" target="@item.Target">@item.Text</a></li>
     }
-    else
-    {
-        <ul>
-            <li>Xin chào:@session.UserName</li>
-            <li>@Html.ActionLink("Thoát", "Logout", "User")</li>
-        </ul>
-    }
+}
+else
+{
+    <li>Xin chào:@session.UserName</li>
+    <li>@Html.ActionLink("Thoát", "Logout", "User")</li>
+}
 
-</div>
-<div class="clear"></div>
+
+@*<div class="call">
+        <p>Chào mừng bạn đến với website!</p>
+        <p><span>Bạn cần giúp đỡ?</span>Gọi ngay cho chúng tôi <span class="number">0988750653</span></p>
+    </div>
+    <div class="account_desc">
+        @{
+            var session = (UserLogin)Session[OnlineShop.Common.CommonConstants.USER_SESSION];
+        }
+        @if (session == null)
+        {
+            <ul>
+                @foreach (var item in Model)
+                {
+                    <li><a href="@item.Link" target="@item.Target">@item.Text</a></li>
+                }
+
+            </ul>
+        }
+        else
+        {
+            <ul>
+                <li>Xin chào:@session.UserName</li>
+                <li>@Html.ActionLink("Thoát", "Logout", "User")</li>
+            </ul>
+        }
+
+    </div>
+    <div class="clear"></div>*@
