@@ -18,3 +18,14 @@ G:\GIT_Work\OnlineShop_52\StaticResources\obj\Debug\StaticResources.csproj.CoreC
 G:\GIT_Work\OnlineShop_52\StaticResources\obj\Debug\en\StaticResources.resources.dll
 G:\GIT_Work\OnlineShop_52\StaticResources\obj\Debug\StaticResources.dll
 G:\GIT_Work\OnlineShop_52\StaticResources\obj\Debug\StaticResources.pdb
+G:\GIT_Work\WEBSALE\OnlineShop_52\StaticResources\bin\Debug\StaticResources.dll
+G:\GIT_Work\WEBSALE\OnlineShop_52\StaticResources\bin\Debug\StaticResources.pdb
+G:\GIT_Work\WEBSALE\OnlineShop_52\StaticResources\bin\Debug\en\StaticResources.resources.dll
+G:\GIT_Work\WEBSALE\OnlineShop_52\StaticResources\obj\Debug\StaticResources.csprojResolveAssemblyReference.cache
+G:\GIT_Work\WEBSALE\OnlineShop_52\StaticResources\obj\Debug\StaticResources.Resources.resources
+G:\GIT_Work\WEBSALE\OnlineShop_52\StaticResources\obj\Debug\StaticResources.Resources.en.resources
+G:\GIT_Work\WEBSALE\OnlineShop_52\StaticResources\obj\Debug\StaticResources.csproj.GenerateResource.Cache
+G:\GIT_Work\WEBSALE\OnlineShop_52\StaticResources\obj\Debug\StaticResources.csproj.CoreCompileInputs.cache
+G:\GIT_Work\WEBSALE\OnlineShop_52\StaticResources\obj\Debug\en\StaticResources.resources.dll
+G:\GIT_Work\WEBSALE\OnlineShop_52\StaticResources\obj\Debug\StaticResources.dll
+G:\GIT_Work\WEBSALE\OnlineShop_52\StaticResources\obj\Debug\StaticResources.pdb
