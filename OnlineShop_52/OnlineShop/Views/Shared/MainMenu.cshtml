@@ -2,10 +2,19 @@
     <ul class="nav navbar-nav">
         @foreach (var item in Model)
         {
-            <li>
-                <a href="@item.Link" target="@item.Target">@item.Text</a>
+            <li class="dropdown">
+                @if (@item.ID != 4)
+                {
+                    <a href="@item.Link" target="@item.Target">@item.Text</a>
+                }
+                else
+                {
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">@item.Text</a>
+                    { Html.RenderAction("ProductCategory", "Product");}
+                }
             </li>
         }
+
         @*<li class="active"><a href="index.html" class="act">Home</a></li>
              Mega Menu
             <li class="dropdown">

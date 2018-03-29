@@ -72,10 +72,11 @@
                             <div class="starbox small ghosting"> </div>
                         </div>*@
                         <div class="women">
-                            <h6><a href="single.html">@item.Name</a></h6>
+                            @{var url = "/chi-tiet/" + item.MetaTitle + "-" + item.ID;}
+                            <h6><a href="@url">@item.Name</a></h6>
                             @*<span class="size">XL / XXL / S </span>*@
-                            <p><del>$100.00</del><em class="item_price">$70.00</em></p>
-                            <a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+                            <p><del>@item.Price.Value.ToString("N0")đ</del><em class="item_price"> @item.PromotionPrice.Value.ToString("N0")đ</em></p>
+                            <a href="/them-gio-hang?productId=@item.ID&quantity=1" data-text="Thêm vào giỏ" class="my-cart-b item_add">Thêm vào giỏ</a>
                         </div>
                     </div>
                 </div>
@@ -85,7 +86,52 @@
     </div>
 </div>
 
-<div class="content">
+<div class="new-arrivals-w3agile">
+    <div class="container">
+        <h2 class="tittle">Sản Phẩm HOT</h2>
+        <div class="arrivals-grids">
+            @foreach (var item in listFeatureProducts)
+            {
+                <div class="col-md-3 arrival-grid simpleCart_shelfItem">
+                    <div class="grid-arr">
+                        <div class="grid-arrival">
+                            <figure>
+                                <a href="#" class="new-gri" data-toggle="modal" data-target="#myModal1">
+                                    <div class="grid-img">
+                                        <img src="@item.Image" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="grid-img">
+                                        <img src="images/p5.jpg" class="img-responsive" alt="">
+                                    </div>
+                                </a>
+                            </figure>
+                        </div>
+                        <div class="ribben">
+                            <p>MỚI</p>
+                        </div>
+                        <div class="ribben1">
+                            <p>GIẢM</p>
+                        </div>
+                        @*<div class="block">
+                                <div class="starbox small ghosting"> </div>
+                            </div>*@
+                        <div class="women">
+                            @{var url = "/chi-tiet/" + item.MetaTitle + "-" + item.ID;}
+                            <h6><a href="@url">@item.Name</a></h6>
+                            @*<span class="size">XL / XXL / S </span>*@
+                            <p><del>@item.Price.Value.ToString("N0")đ</del><em class="item_price"> @item.PromotionPrice.Value.ToString("N0")đ</em></p>
+                            <a href="/them-gio-hang?productId=@item.ID&quantity=1" data-text="Thêm vào giỏ" class="my-cart-b item_add">Thêm vào giỏ</a>
+                        </div>
+                    </div>
+                </div>
+            }
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+
+@*<div class="content">
     <div class="content_top">
         <div class="heading">
             <h3>Sản phẩm mới</h3>
@@ -143,4 +189,4 @@
             </div>
         }
     </div>
-</div>
+</div>*@

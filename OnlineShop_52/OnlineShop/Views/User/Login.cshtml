@@ -7,9 +7,9 @@
 
 <div class="content">
     @using (Html.BeginForm("Login", "User", FormMethod.Post))
-            {
+    {
         @Html.AntiForgeryToken()
-        <div class="form-horizontal">
+        @*<div class="form-horizontal">
             <h4>Đăng nhập</h4>
             <hr />
 
@@ -41,11 +41,44 @@
                     <input type="submit" value="Đăng nhập" class="btn btn-default" />
                     <a class="btn btn-facebook" href="/User/LoginFacebook">
                         <i class="fa fa-facebook"></i>
-                        Đăng nhập bằng Facebook 
+                        Đăng nhập bằng Facebook
                     </a>
                 </div>
             </div>
+        </div>*@
+        <div class="content">
+            <!--login-->
+            <div class="login">
+                <div class="main-agileits">
+                    <div class="form-w3agile">
+                        <h3>Đăng nhập Adam Fashion</h3>
+                        <form action="#" method="post">
+                            <div class="">
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger", @style = "padding: 10px;" })
+                            </div>
+                            <div class="key">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                @Html.TextBoxFor(model => model.UserName, new { @placeholder = "Tên đăng nhập", @onfocus = "this.value = '';", @onblur = "if (this.value == '') {this.value = '';}", @required = "" })
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="key">
+                                <i class="fa fa-lock" aria-hidden="true"></i>
+                                @Html.PasswordFor(model => model.Password, new { @placeholder = "********", @onfocus = "this.value = '';", @onblur = "if (this.value == '') {this.value = '';}", @required = "" })
+                                <div class="clearfix"></div>
+                            </div>
+                            <input type="submit" value="Đăng nhập">
+                        </form>
+                    </div>
+                    <div class="forg">
+                        <a href="#" class="forg-left">Quên mật khẩu?</a>
+                        <a href="registered.html" class="forg-right">Đăng ký</a>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <!--login-->
         </div>
+        <!--content-->
     }
 
 
