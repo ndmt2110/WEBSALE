@@ -15,8 +15,11 @@ namespace OnlineShop.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            //new ProductSizeColorDao().test();
+            //var x = new ProductSizeColorDao().ListAllColor(1);
             ViewBag.Slides = new SlideDao().ListAll();
             var productDao = new ProductDao();
+            
             ViewBag.NewProducts = productDao.ListNewProduct(4);
             ViewBag.ListFeatureProducts = productDao.ListFeatureProduct(4);
             return View();

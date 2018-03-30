@@ -74,7 +74,8 @@
                         <div class="women">
                             @{var url = "/chi-tiet/" + item.MetaTitle + "-" + item.ID;}
                             <h6><a href="@url">@item.Name</a></h6>
-                            @*<span class="size">XL / XXL / S </span>*@
+                            <span class="size">@string.Join("/", item.lstSize.Select(x => x.Size1))</span>
+                            <span class="size">@string.Join("/", item.lstColor.Select(x => x.ColorName))</span>
                             <p><del>@item.Price.Value.ToString("N0")đ</del><em class="item_price"> @item.PromotionPrice.Value.ToString("N0")đ</em></p>
                             <a href="/them-gio-hang?productId=@item.ID&quantity=1" data-text="Thêm vào giỏ" class="my-cart-b item_add">Thêm vào giỏ</a>
                         </div>
