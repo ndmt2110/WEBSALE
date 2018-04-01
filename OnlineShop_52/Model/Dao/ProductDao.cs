@@ -15,9 +15,36 @@ namespace Model.Dao
         {
             db = new OnlineShopDbContext();
         }
+        private List<Color> GetListColorByProductID(long ProductID)
+        {
+            List<ProductSizeColor> lstPSC = db.ProductSizeColors.Where(x => x.ProductID == ProductID).ToList();
+            List<Color> lstColor = new List<Color>();
+            foreach (var item in lstPSC)
+            {
+                lstColor.AddRange(db.Colors.Where(x => x.ColorID == item.ColorID).ToList());
+            }
+            return lstColor;
+        }
+
+        private List<Size> GetListSizeByProductID(long ProductID)
+        {
+            List<ProductSizeColor> lstPSC = db.ProductSizeColors.Where(x => x.ProductID == ProductID).ToList();
+            List<Size> lstSize = new List<Size>();
+            foreach (var item in lstPSC)
+            {
+                lstSize.AddRange(db.Sizes.Where(x => x.SizeID == item.SizeID).ToList());
+            }
+            return lstSize;
+        }
 
         public List<Product> ListNewProduct(int top)
         {
+            List<Product> lst = db.Products.OrderByDescending(x => x.CreatedDate).Take(top).ToList();
+            for (int i = 0; i < lst.Count; i++)
+            {
+                lst[i].lstSize = GetListSizeByProductID(lst[i].ID);
+                lst[i].lstColor = GetListColorByProductID(lst[i].ID);
+            }
             return db.Products.OrderByDescending(x => x.CreatedDate).Take(top).ToList();
         }
         public List<string> ListName(string keyword)

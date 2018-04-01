@@ -65,5 +65,9 @@ namespace Model.EF
         public DateTime? TopHot { get; set; }
 
         public int? ViewCount { get; set; }
+        [NotMapped]
+        public List<Color> lstColor { get; set; }
+        [NotMapped]
+        public List<Size> lstSize { get; set; }
     }
 }
