@@ -4,7 +4,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div class="content">
-    <div class="section group">
+    <div class="container_payment">
+        <h2>Đơn hàng</h2>
         @if (Model.Count > 0)
         {
             <table class="table">
@@ -26,41 +27,58 @@
                             <td>@item.Product.ID</td>
                             <td>@item.Product.Name</td>
                             <td><img src="@item.Product.Image" width="100" /></td>
-                            <td><input type="text" class="txtQuantity" data-id="@item.Product.ID" value="@item.Quantity" /></td>
+                            <td><input type="number" class="txtQuantity" data-id="@item.Product.ID" value="@item.Quantity" min="1" step="1" /></td>
                             <td>@item.Product.Price.GetValueOrDefault(0).ToString("N0")</td>
-                            <td>@((item.Product.Price.GetValueOrDefault(0) * item.Quantity).ToString("N0"))</td>
-                            <td><a href="#" data-id="@item.Product.ID" class="btn-delete">Xoá</a></td>
+                            <td>@((item.Product.Price.GetValueOrDefault(0) * @item.Quantity).ToString("N0"))</td>
+                            <td><a href="#" data-id="@item.Product.ID" class="btn-delete">&#10006</a></td>
                         </tr>
                     }
 
                 </tbody>
             </table>
+            <div class="btn_Payment">
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="text-align: right;">Tiếp tục</button>
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-sm" role="form">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            </div>
+                            <div class="modal-body">
+                                @using (Html.BeginForm("Payment", "Cart", FormMethod.Post))
+                                {
+                                    <h2 style="text-align: center;">Địa điểm giao hàng</h2>
+                                    <div class="form-group">
+                                        <label>Người nhận</label>
+                                        <input name="shipName" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Điện thoại</label>
+                                        <input name="mobile" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Địa chỉ</label>
+                                        <input name="address" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input name="email" class="form-control" />
+                                    </div>
+                                    <button type="submit" class="btn">Gửi đơn hàng</button>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="empty-cart">
+                Chưa có sản phẩm nào trong Đơn hàng
+            </div>
         }
 
     </div>
-    <div class="section group">
-        <div class="col-md-6">
-            @using (Html.BeginForm("Payment", "Cart", FormMethod.Post))
-            {
-                <div class="form-group">
-                    <label>Người nhận</label>
-                    <input name="shipName" class="form-control" />
-                </div>
-                <div class="form-group">
-                    <label>Điện thoại</label>
-                    <input name="mobile" class="form-control" />
-                </div>
-                <div class="form-group">
-                    <label>Địa chỉ</label>
-                    <input name="address" class="form-control" />
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input name="email" class="form-control" />
-                </div>
-                <button type="submit" class="btn">Gửi đơn hàng</button>
-            }
-        </div>
-       
-    </div>
+
 </div>

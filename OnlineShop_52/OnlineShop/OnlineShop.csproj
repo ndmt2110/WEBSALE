@@ -1498,6 +1498,7 @@
     <Content Include="Views\Content\Tag.cshtml" />
     <Content Include="Views\Shared\401.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\Slider.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
